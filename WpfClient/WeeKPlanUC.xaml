@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="WpfClient.WeeKPlanUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfClient" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel Orientation="Horizontal" AllowDrop="True">
+        <StackPanel>
+            <StackPanel x:Name="MoveToTrash" AllowDrop="True"/>
+            <Button x:Name="CopyWorkPlan" Visibility="Collapsed" Click="CopyWorkPlan_Click" Width="200" Height="50"
+                    Background="#3498db" Foreground="White" BorderThickness="1" Padding="10" FontWeight="Bold" HorizontalAlignment="Center">
+                <TextBlock Text="Copy Selected Plan" />
+            </Button>
+            <ListBox Width="340" Height="700" x:Name="ExLB" HorizontalAlignment="center" VerticalAlignment="Center" AllowDrop="True" HorizontalContentAlignment="Center" />
+        </StackPanel>
+        
+        <WrapPanel x:Name="ExWP" Width="1280" HorizontalAlignment="Center">
+            <StackPanel x:Name="SundayST" Height="440" Width="320" HorizontalAlignment="Center" />
+            <StackPanel x:Name="MondayST" Height="440" Width="320" HorizontalAlignment="Center" />
+            <StackPanel x:Name="TuesdayST" Height="440" Width="320" HorizontalAlignment="Center" />
+            <StackPanel x:Name="WednesdayST" Height="440" Width="320" HorizontalAlignment="Center" />
+            <WrapPanel HorizontalAlignment="Center" Margin="160,0,0,0">
+                <StackPanel x:Name="ThursdayST" Height="440" Width="320" />
+                <StackPanel x:Name="FridayST" Height="440" Width="320" />
+                <StackPanel x:Name="SaturdayST" Height="440" Width="320" />
+            </WrapPanel>
+        </WrapPanel>
+    </StackPanel>
+</UserControl>

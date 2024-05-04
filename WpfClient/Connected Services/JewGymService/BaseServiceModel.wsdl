@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="BaseServiceModel" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ServiceModel/BaseServiceModel/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ServiceModel/BaseServiceModel/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ServiceModel/BaseServiceModel/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Model" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ServiceModel/BaseServiceModel/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/PlanModel" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceModel_InsertExercises_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertExercises" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_InsertExercises_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertExercisesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_UpdateExercises_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExercises" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_UpdateExercises_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExercisesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_DeleteExercises_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExercises" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_DeleteExercises_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExercisesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_SelectAllExercises_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllExercises" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_SelectAllExercises_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllExercisesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_InsertExInWorkout_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertExInWorkout" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_InsertExInWorkout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertExInWorkoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_UpdateExInWorkout_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExInWorkout" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_UpdateExInWorkout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExInWorkoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_DeleteExInWorkout_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExInWorkout" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_DeleteExInWorkout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExInWorkoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_DeleteAllExInWorkout_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllExInWorkout" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_DeleteAllExInWorkout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllExInWorkoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_SelectAllExercisesInWorkout_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllExercisesInWorkout" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_SelectAllExercisesInWorkout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllExercisesInWorkoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_SelectExInByWorkOut_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectExInByWorkOut" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_SelectExInByWorkOut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectExInByWorkOutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_InsertWorkout_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertWorkout" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_InsertWorkout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertWorkoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_UpdateWorkout_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWorkout" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_UpdateWorkout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWorkoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_DeleteWorkout_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWorkout" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_DeleteWorkout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWorkoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_SelectAllWorkouts_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllWorkouts" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_SelectAllWorkouts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllWorkoutsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_SelectWorkoutById_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectWorkoutById" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_SelectWorkoutById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectWorkoutByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_NewUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:NewUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_NewUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NewUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_IsEmailFree_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsEmailFree" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_IsEmailFree_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsEmailFreeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_SelectAllUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_SelectAllUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_GetAllPlanAdmins_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPlanAdmins" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_GetAllPlanAdmins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPlanAdminsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_GetUserWorkoutPlans_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserWorkoutPlans" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_GetUserWorkoutPlans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserWorkoutPlansResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_InsertWorkoutPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertWorkoutPlan" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_InsertWorkoutPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertWorkoutPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_UpdateWorkoutPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWorkoutPlan" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_UpdateWorkoutPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWorkoutPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_DeleteWorkoutPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWorkoutPlan" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_DeleteWorkoutPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWorkoutPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_GetTodayWorkoutPlan_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTodayWorkoutPlan" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_GetTodayWorkoutPlan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTodayWorkoutPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_DeletePlansByUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePlansByUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceModel_DeletePlansByUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePlansByUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceModel">
+    <wsdl:operation name="InsertExercises">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/InsertExercises" message="tns:IServiceModel_InsertExercises_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/InsertExercisesResponse" message="tns:IServiceModel_InsertExercises_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExercises">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/UpdateExercises" message="tns:IServiceModel_UpdateExercises_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/UpdateExercisesResponse" message="tns:IServiceModel_UpdateExercises_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExercises">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/DeleteExercises" message="tns:IServiceModel_DeleteExercises_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/DeleteExercisesResponse" message="tns:IServiceModel_DeleteExercises_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllExercises">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/SelectAllExercises" message="tns:IServiceModel_SelectAllExercises_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/SelectAllExercisesResponse" message="tns:IServiceModel_SelectAllExercises_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertExInWorkout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/InsertExInWorkout" message="tns:IServiceModel_InsertExInWorkout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/InsertExInWorkoutResponse" message="tns:IServiceModel_InsertExInWorkout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExInWorkout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/UpdateExInWorkout" message="tns:IServiceModel_UpdateExInWorkout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/UpdateExInWorkoutResponse" message="tns:IServiceModel_UpdateExInWorkout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExInWorkout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/DeleteExInWorkout" message="tns:IServiceModel_DeleteExInWorkout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/DeleteExInWorkoutResponse" message="tns:IServiceModel_DeleteExInWorkout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllExInWorkout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/DeleteAllExInWorkout" message="tns:IServiceModel_DeleteAllExInWorkout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/DeleteAllExInWorkoutResponse" message="tns:IServiceModel_DeleteAllExInWorkout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllExercisesInWorkout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/SelectAllExercisesInWorkout" message="tns:IServiceModel_SelectAllExercisesInWorkout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/SelectAllExercisesInWorkoutResponse" message="tns:IServiceModel_SelectAllExercisesInWorkout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectExInByWorkOut">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/SelectExInByWorkOut" message="tns:IServiceModel_SelectExInByWorkOut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/SelectExInByWorkOutResponse" message="tns:IServiceModel_SelectExInByWorkOut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertWorkout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/InsertWorkout" message="tns:IServiceModel_InsertWorkout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/InsertWorkoutResponse" message="tns:IServiceModel_InsertWorkout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWorkout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/UpdateWorkout" message="tns:IServiceModel_UpdateWorkout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/UpdateWorkoutResponse" message="tns:IServiceModel_UpdateWorkout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWorkout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/DeleteWorkout" message="tns:IServiceModel_DeleteWorkout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/DeleteWorkoutResponse" message="tns:IServiceModel_DeleteWorkout_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllWorkouts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/SelectAllWorkouts" message="tns:IServiceModel_SelectAllWorkouts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/SelectAllWorkoutsResponse" message="tns:IServiceModel_SelectAllWorkouts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectWorkoutById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/SelectWorkoutById" message="tns:IServiceModel_SelectWorkoutById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/SelectWorkoutByIdResponse" message="tns:IServiceModel_SelectWorkoutById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/Login" message="tns:IServiceModel_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/LoginResponse" message="tns:IServiceModel_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NewUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/NewUser" message="tns:IServiceModel_NewUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/NewUserResponse" message="tns:IServiceModel_NewUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsEmailFree">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/IsEmailFree" message="tns:IServiceModel_IsEmailFree_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/IsEmailFreeResponse" message="tns:IServiceModel_IsEmailFree_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/UpdateUser" message="tns:IServiceModel_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/UpdateUserResponse" message="tns:IServiceModel_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/DeleteUser" message="tns:IServiceModel_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/DeleteUserResponse" message="tns:IServiceModel_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/SelectAllUsers" message="tns:IServiceModel_SelectAllUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/SelectAllUsersResponse" message="tns:IServiceModel_SelectAllUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPlanAdmins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/GetAllPlanAdmins" message="tns:IServiceModel_GetAllPlanAdmins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/GetAllPlanAdminsResponse" message="tns:IServiceModel_GetAllPlanAdmins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserWorkoutPlans">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/GetUserWorkoutPlans" message="tns:IServiceModel_GetUserWorkoutPlans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/GetUserWorkoutPlansResponse" message="tns:IServiceModel_GetUserWorkoutPlans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertWorkoutPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/InsertWorkoutPlan" message="tns:IServiceModel_InsertWorkoutPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/InsertWorkoutPlanResponse" message="tns:IServiceModel_InsertWorkoutPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWorkoutPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/UpdateWorkoutPlan" message="tns:IServiceModel_UpdateWorkoutPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/UpdateWorkoutPlanResponse" message="tns:IServiceModel_UpdateWorkoutPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWorkoutPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/DeleteWorkoutPlan" message="tns:IServiceModel_DeleteWorkoutPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/DeleteWorkoutPlanResponse" message="tns:IServiceModel_DeleteWorkoutPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTodayWorkoutPlan">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/GetTodayWorkoutPlan" message="tns:IServiceModel_GetTodayWorkoutPlan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/GetTodayWorkoutPlanResponse" message="tns:IServiceModel_GetTodayWorkoutPlan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlansByUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceModel/DeletePlansByUser" message="tns:IServiceModel_DeletePlansByUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceModel/DeletePlansByUserResponse" message="tns:IServiceModel_DeletePlansByUser_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceModel" type="tns:IServiceModel">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertExercises">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/InsertExercises" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExercises">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/UpdateExercises" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExercises">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/DeleteExercises" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllExercises">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/SelectAllExercises" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertExInWorkout">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/InsertExInWorkout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExInWorkout">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/UpdateExInWorkout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExInWorkout">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/DeleteExInWorkout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllExInWorkout">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/DeleteAllExInWorkout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllExercisesInWorkout">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/SelectAllExercisesInWorkout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectExInByWorkOut">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/SelectExInByWorkOut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertWorkout">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/InsertWorkout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWorkout">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/UpdateWorkout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWorkout">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/DeleteWorkout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllWorkouts">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/SelectAllWorkouts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectWorkoutById">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/SelectWorkoutById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NewUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/NewUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsEmailFree">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/IsEmailFree" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllUsers">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/SelectAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPlanAdmins">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/GetAllPlanAdmins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserWorkoutPlans">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/GetUserWorkoutPlans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertWorkoutPlan">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/InsertWorkoutPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWorkoutPlan">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/UpdateWorkoutPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWorkoutPlan">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/DeleteWorkoutPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTodayWorkoutPlan">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/GetTodayWorkoutPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlansByUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceModel/DeletePlansByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BaseServiceModel">
+    <wsdl:port name="BasicHttpBinding_IServiceModel" binding="tns:BasicHttpBinding_IServiceModel">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/ServiceModel/BaseServiceModel/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="WpfClient.ExerciseUC" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+             xmlns:local="clr-namespace:WpfClient" mc:Ignorable="d" 
+             d:DesignHeight="700" d:DesignWidth="450">
+    <Grid Background="White" Width="450" Height="770">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="530" />
+            <RowDefinition Height="90"/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="32" >
+            Select Exercise
+        </TextBlock>
+        <StackPanel Grid.Row="1">
+            <Border BorderBrush="#ABADB3" BorderThickness="1" Background="#F3F4F6" CornerRadius="5" Margin="20,0">
+                <Grid>
+                    <TextBox x:Name="tbSearch" Background="Transparent" BorderThickness="0" Padding="10,5" VerticalContentAlignment="Center" TextChanged="tbSearch_TextChanged" />
+                </Grid>
+            </Border>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <ComboBox Style="{StaticResource MaterialDesignFilledComboBox}" x:Name="bodypartCB" Background="White" SelectionChanged="BodyPart_SelectionChanged">
+                    <ComboBox.Resources>
+                        <SolidColorBrush x:Key="MaterialDesignPaper" Color="White" />
+                    </ComboBox.Resources>
+                    <ComboBoxItem Background="White" Content="Any Body Part" IsSelected="True" />
+                    <ComboBoxItem Content="Legs" />
+                    <ComboBoxItem Content="Back" />
+                    <ComboBoxItem Content="Chest" />
+                    <ComboBoxItem Content="Shoulders" />
+                    <ComboBoxItem Content="Biceps" />
+                    <ComboBoxItem Content="Triceps" />
+                    <ComboBoxItem Content="Core" />
+                    <ComboBoxItem Content="Forearms" />
+                    <ComboBoxItem Content="Whole Body" />
+                </ComboBox>
+                <ComboBox Style="{StaticResource MaterialDesignFilledComboBox}" x:Name="typeCB" SelectionChanged="TypeCB_SelectionChanged">
+                    <ComboBox.Resources>
+                        <SolidColorBrush x:Key="MaterialDesignPaper" Color="White" />
+                    </ComboBox.Resources>
+                    <ComboBoxItem Content="Any Category" IsSelected="True" />
+                    <ComboBoxItem Content="Barbell" />
+                    <ComboBoxItem Content="Bodyweight" />
+                    <ComboBoxItem Content="Dumbbell" />
+                    <ComboBoxItem Content="Machine" />
+                    <ComboBoxItem Content="Cable" />
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+        <ListBox Grid.Row="2" x:Name="MiniExLB" SelectionChanged="MiniExLB_SelectionChanged" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.CanContentScroll="True" Height="530"></ListBox>
+            <Button Grid.Row="3" Width="80" Height="40" FontSize="16" Margin="16" Click="Button_Click">close</Button>
+    </Grid>
+</UserControl>

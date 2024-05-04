@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PlanModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PlanModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/ServiceModel/BaseServiceModel/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Model" />
+  <xs:complexType name="WorkoutPlanList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkoutPlan" nillable="true" type="tns:WorkoutPlan" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkoutPlanList" nillable="true" type="tns:WorkoutPlanList" />
+  <xs:complexType name="WorkoutPlan">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Model" base="q1:BaseEntity">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Day" type="xs:int" />
+          <xs:element minOccurs="0" name="User" nillable="true" type="q1:User" />
+          <xs:element minOccurs="0" name="Workout" nillable="true" type="q1:Workout" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WorkoutPlan" nillable="true" type="tns:WorkoutPlan" />
+</xs:schema>
