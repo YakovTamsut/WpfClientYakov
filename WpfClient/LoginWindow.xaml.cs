@@ -110,7 +110,7 @@ namespace WpfClient
         {
             user = new User { Email = "moshe@gmail.com", Password ="Moshe_123" };
             user = GymService.Login(user);
-            UserWindow wp = new UserWindow(user);
+            ManagerWindow wp = new ManagerWindow(user);
             wp.ShowDialog();
             this.Close();
            

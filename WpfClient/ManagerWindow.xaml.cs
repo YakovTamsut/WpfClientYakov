@@ -78,7 +78,13 @@ namespace WpfClient
         public void ManageUsers_Selected(object sender, RoutedEventArgs e)
         {
             this.ProgramView.Children.Clear();
-            ProgramView.Children.Add(new DisplayUsersUC());
+            ProgramView.Children.Add(new DisplayUsersUC(this));
+        }
+
+        public void ManageUsers_Selected()
+        {
+            this.ProgramView.Children.Clear();
+            ProgramView.Children.Add(new DisplayUsersUC(this));
         }
     }
 }

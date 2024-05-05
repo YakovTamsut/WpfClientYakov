@@ -22,10 +22,12 @@ namespace WpfClient
     public partial class AdminUserStatus : UserControl
     {
         private ServiceModelClient GymService;
+        private ManagerWindow window;
         User clickedUser;
-        public AdminUserStatus(User user)
+        public AdminUserStatus(User user, ManagerWindow window)
         {
             InitializeComponent();
+            this.window = window;
             GymService = new ServiceModelClient();
             userItem.Header = user.Firstname + " " + user.Lastname;
             clickedUser = user;
@@ -34,6 +36,7 @@ namespace WpfClient
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             GymService.DeleteUser(clickedUser);
+            window.ManageUsers_Selected();
         }
 
     }

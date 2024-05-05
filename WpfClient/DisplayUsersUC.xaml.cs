@@ -23,10 +23,11 @@ namespace WpfClient
     {
         private ServiceModelClient GymService;
         private UserList users = new UserList();
-
-        public DisplayUsersUC()
+        private ManagerWindow window;
+        public DisplayUsersUC(ManagerWindow window)
         {
             InitializeComponent();
+            this.window = window;
             GymService = new ServiceModelClient();
             users = GymService.SelectAllUsers();
             Users.ItemsSource = users;
@@ -37,7 +38,7 @@ namespace WpfClient
             if (Users.SelectedIndex == -1) return;
             User user = Users.SelectedItem as User;
 
-            AdminUserStatus adminUserStatus = new AdminUserStatus(user);
+            AdminUserStatus adminUserStatus = new AdminUserStatus(user, window);
             refreshWithDelay(adminUserStatus);
 
         }
